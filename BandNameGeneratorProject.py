@@ -1,4 +1,5 @@
-print("!!!! Hi welcome to the Band Name Generator Project !!!!\n")
+print("!!!! Hi welcome to the Band Name Generator Project Created by: Mahad Mohamed"
+      "!!!!\n")
 
 name = input("What's your name? \n")
 
