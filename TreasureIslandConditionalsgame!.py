@@ -24,22 +24,25 @@ print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
 lefttoright = input("Which direction do you want to go? Left or Right? ")
+lefttoright = lefttoright.upper()
 
-if lefttoright == "Left":
+if lefttoright == "LEFT":
     swimorwait = input("Do you want to swim or wait? Pick one ")
-    if swimorwait == "Wait":
+    swimorwait = swimorwait.upper()
+    if swimorwait == "WAIT":
         door = input("pick a door color: Red, Blue, or Yellow: ")
-        if door == "Yellow":
+        door = door.upper()
+        if door == "YELLOW":
             print("You win!!!")
             quit()
-        elif door == "Blue":
+        elif door == "BLUE":
             print("You were eaten by beasts! GAME OVER")
             quit()
-        elif door == "Red":
+        elif door == "RED":
             print("You were burned in a fire! GAME IS OVER")
             quit()
-    elif swimorwait == "Swim":
+    elif swimorwait == "SWIM":
         print("Attacked by trout! Game OVER")
-elif lefttoright == "Right":
+elif lefttoright == "RIGHT":
     print("You fell into a hole! GAME OVER!")
     quit()
