@@ -46,3 +46,5 @@ if lefttoright == "LEFT":
 elif lefttoright == "RIGHT":
     print("You fell into a hole! GAME OVER!")
     quit()
+
+
