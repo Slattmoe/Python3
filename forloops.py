@@ -23,6 +23,7 @@ for i in range(nr_numbers):
 finalpw = ""
 
 random.shuffle(password)
+
 for i in range(len(password)):
     finalpw += password[i]
 
