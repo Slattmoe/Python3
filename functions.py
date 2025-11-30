@@ -15,13 +15,15 @@ pick = int(input("what is your pick: 1-10: "))
 if pick > 10 or pick < 1:
     print("invalid input please enter right value")
 
+pick = True
 
 # Created a while loop to test if user's pick was right
 while pick != secret:
     # Validating the users input after they run it a second time!
-    if pick > 10 or pick < 0:
-        print("invalid input, please run the program again")
-        break
+    if pick > 10 or pick < 0 and pick == "":
+        print("invalid input, please enter a good number")
+        print("Please try to enter another number")
+        pick = int(input("What is your new pick: 1-10"))
     print(f"\nyour pick was: {pick}")
     print("Wrong guess sorry\n")
     # Printed the computers guess 
@@ -33,3 +35,4 @@ if pick == secret:
     print(f"\nyour pick was: {pick}")
     print(f"\nthe right guess was: {secret}")
     print("\ncongrats you finally guessed right!!")
+    Pick = False
