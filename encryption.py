@@ -11,7 +11,7 @@ shift = int(input("Type the shift number:\n"))
 def encrypt(original_text, shift_amount):
     ciphertext = ""
     for i in original_text:
-        index = alphabet.index(i) + shift_amount
+        index = (alphabet.index(i) + shift_amount) % 26
         ciphertext += alphabet[index]
     print(ciphertext)
 
@@ -20,7 +20,7 @@ def encrypt(original_text, shift_amount):
 def decrypt(original_text, shift_amount):
     ciphertext = ""
     for i in original_text:
-        index = alphabet.index(i) - shift_amount
+        index = (alphabet.index(i) - shift_amount) % 26
         ciphertext += alphabet[index]
     print(ciphertext)
 
@@ -28,17 +28,9 @@ def decrypt(original_text, shift_amount):
 def caeser(user_direction, texts, shifts):
     
     if user_direction == "encode":
-        ciphertext = ""
-        for i in texts:
-            index = (alphabet.index(i) + shifts) % 26
-            ciphertext += alphabet[index]
-        print(ciphertext)
+        encrypt(texts, shifts)
     else:
-        ciphertext = ""
-        for i in texts:
-            index = (alphabet.index(i) - shifts) % 26
-            ciphertext += alphabet[index]
-        print(ciphertext)
+        decrypt(texts, shifts)
 
     goagain = True
 
