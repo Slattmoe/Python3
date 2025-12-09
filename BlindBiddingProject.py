@@ -51,6 +51,7 @@ while bidcon:
     # The core function of the program!!!
     # Comparing the values in the auction using the function we created. Makes it more simple. instead of writing this out
     else:
+        # printed this because if there aren't any more bidders then we print out the final winner of the game!
         highestbid(auction)
         bidcon = False
 
